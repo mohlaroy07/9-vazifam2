@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ ad.title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" />
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- Rasm ko'rsatish -->
+    {% if ad.image %}
+       <h1 align="center"> <img src="{{ ad.image.url }}" alt="{{ ad.title }}" style="max-width: 100%; height: auto;" />
+       </h1>
+    {% endif %}
+    <h1>{{ ad.title }}</h1>
+    <p>{{ ad.content }}</p>
+
+    <!-- Back to Home havolasi -->
+    <div class="d-flex justify-content-center" style="margin-top: 20px;">
+        <a href="http://127.0.0.1:8000/" class="btn btn-primary">Back to Home</a>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
+
+</body>
+</html>
